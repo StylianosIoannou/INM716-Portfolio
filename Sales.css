@@ -113,10 +113,12 @@ main h1 {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .art-piece {
@@ -125,13 +127,13 @@ main h1 {
     width: 250px;
     text-align: center;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .art-piece img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .art-piece h3 {
