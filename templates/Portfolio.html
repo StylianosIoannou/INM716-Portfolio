@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -19,9 +19,9 @@
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
-                <a href="Homepage.html">Home</a>
-                <a href="Sales.html">Sales</a>
-                <a href="Portfolio.html">Portfolio</a>
+                <a href="/">Home</a>
+                <a href="/sales">Sales</a>
+                <a href="/portfolio">Portfolio</a>
             </div>
         </div>
     </header>
@@ -29,41 +29,41 @@
     <main class="portfolio">
         <div class="portfolio-grid">
             <a href="artwork1.html" class="portfolio-item">
-                <img src="Aralsea.jpg" alt="AI Artwork 1">
+                <img src="{{ url_for('static', filename='images/Aralsea.jpg') }}" alt="AI Artwork 1">
                 <p>The Aral Sea in Central Asia before Desertification.</p>
             </a>
             <a href="artwork2.html" class="portfolio-item">
-                <img src="zayanderud.jpg" alt="AI Artwork 2">
+                <img src="{{ url_for('static', filename='images/zayanderud.jpg') }}" alt="AI Artwork 2">
                 <p>The Zayanderud River in Isfahan before Drying.</p>
             </a>
             <a href="artwork3.html" class="portfolio-item">
-                <img src="icelandicforests.jpg" alt="AI Artwork 3">
+                <img src="{{ url_for('static', filename='images/icelandicforests.jpg') }}" alt="AI Artwork 3">
                 <p>The Beech Forests in Iceland before Deforestation.</p>
             </a>
             <a href="artwork4.html" class="portfolio-item">
-                <img src="nativeamericans.jpg" alt="AI Artwork 4">
+                <img src="{{ url_for('static', filename='images/nativeamericans.jpg') }}" alt="AI Artwork 4">
                 <p>The Native American landscapes and culture.</p>
             </a>
             <a href="artwork5.html" class="portfolio-item">
-                <img src="vikingspast.jpg" alt="AI Artwork 5">
+                <img src="{{ url_for('static', filename='images/vikingspast.jpg') }}" alt="AI Artwork 5">
                 <p>The Norse Vikings lost to history within their Mountains and Seas.</p>
             </a>
             <a href="artwork6.html" class="portfolio-item">
-                <img src="jerusalem.jpg" alt="AI Artwork 6">
+                <img src="{{ url_for('static', filename='images/jerusalem.jpg') }}" alt="AI Artwork 6">
                 <p>Jerusalem on top of the Mountains by the Dead Sea.</p>
             </a>
         </div>
 
         <div class="pagination">
-            <a href="portfolio.html" class="page-link current">1</a>
-            <a href="portfolio2.html" class="page-link">2</a>
-            <a href="portfolio3.html" class="page-link">3</a>
+            <a href="/portfolio" class="page-link current">1</a>
+            <a href="/portfolio2" class="page-link">2</a>
+            <a href="/portfolio3" class="page-link">3</a>
         </div>
     </main>
 
     <footer>
-        <a href="About.html">About Us</a>
-        <a href="Contact.html">Contact Us</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
     </footer>
 </body>
 </html>
