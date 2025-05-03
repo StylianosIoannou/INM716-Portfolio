@@ -167,3 +167,30 @@ footer a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.image-comparison {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Image Comparison Styles */
+.image-comparison div {
+    flex: 1;
+    max-width: 450px;
+    text-align: center;
+}
+
+.image-comparison img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.image-comparison h3 {
+    margin-bottom: 10px;
+    color: #333;
+}

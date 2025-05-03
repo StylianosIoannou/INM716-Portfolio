@@ -44,32 +44,38 @@ artworks = {
     "aral-sea": {
         "title": "The Aral Sea",
         "image": "images/Aralsea.jpg",
+        "current_image": "images/Aralsea.jpg",
         "description": "Once a vast inland sea, now reduced to salt and memory. This piece reimagines the Aral Sea before ecological collapse — a thriving aquatic realm teeming with life and serenity, honoring what was and mourning what’s lost."
     },
     "zayanderud": {
         "title": "Zayanderud Echo",
         "image": "images/zayanderud.jpg",
+        "current_image": "images/zayanderud.jpg",
         "description": "Flowing through the heart of Isfahan, the Zayanderud River sustained generations. Here, we restore its ancient pulse through AI, imagining the river alive again — cradling bridges, gardens, and the soul of a city."
     },
     "icelandic-forests": {
         "title": "Beech Forests of Iceland",
         "image": "images/icelandicforests.jpg",
+        "current_image": "images/icelandicforests.jpg",
         "description": "Before the axes fell and the winds howled through bare landscapes, Iceland was cloaked in ancient beech forests. This vision breathes life back into that forgotten green, whispering what might have been."
     },
     "native-americans": {
         "title": "Native American Landscapes",
         "image": "images/nativeamericans.jpg",
+        "current_image": "images/nativeamericans.jpg",
         "description": "This artwork pays tribute to Indigenous harmony with land — where mountains, animals, and people spoke in shared rhythms. It is not a reconstruction but a reverent reflection on balance, spirit, and sovereignty."
     },
     "vikings-past": {
         "title": "Norse Vikings Lost to Time",
         "image": "images/vikingspast.jpg",
+        "current_image": "images/vikingspast.jpg",
         "description": "Among the fjords and crashing seas, Viking voices echo. This piece imagines not conquest, but quiet — the sacred landscapes, rituals, and seaborne myths that carried Norse memory across time."
 
     },
     "jerusalem": {
         "title": "Jerusalem by the Dead Sea",
         "image": "images/jerusalem.jpg",
+        "current_image": "images/jerusalem.jpg",
         "description": "Perched on sacred stone, Jerusalem is reimagined in its mythic stillness. The city stands timeless, looking over the Dead Sea — a place of prophecy, pilgrimage, and enduring presence."
     },
     "parthenon": {

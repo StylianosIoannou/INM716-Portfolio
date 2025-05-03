@@ -27,11 +27,24 @@
     </header>
 
     <main class="artwork-container">
-        <img src="{{ url_for('static', filename=art.image) }}" alt="{{ art.title }}" class="artwork-image">
         <h1 class="artwork-title">{{ art.title }}</h1>
-        <p class="artwork-description">
-            {{ art.description }}
-        </p>
+
+        {% if art.current_image %}
+        <div class="image-comparison">
+            <div>
+                <h3>Current Landscape</h3>
+                <img src="{{ url_for('static', filename=art.current_image) }}" alt="Current view of {{ art.title }}">
+            </div>
+            <div>
+                <h3>AI Reimagined</h3>
+                <img src="{{ url_for('static', filename=art.image) }}" alt="AI reimagined {{ art.title }}">
+            </div>
+        </div>
+        {% else %}
+        <img src="{{ url_for('static', filename=art.image) }}" alt="{{ art.title }}" class="artwork-image">
+        {% endif %}
+
+        <p class="artwork-description">{{ art.description }}</p>
     </main>
 
     <footer>
