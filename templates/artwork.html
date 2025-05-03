@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ art.title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/artwork.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -26,12 +27,11 @@
     </header>
 
     <main class="artwork-container">
-        <img src="{{ url_for('static', filename='images/Aralsea.jpg') }}" alt="title" class="artwork-image">
-        <h1 class="artwork-title">The Aral Sea</h1>
+        <img src="{{ url_for('static', filename=art.image) }}" alt="{{ art.title }}" class="artwork-image">
+        <h1 class="artwork-title">{{ art.title }}</h1>
         <p class="artwork-description">
-            Long description 
+            {{ art.description }}
         </p>
-        <button class="buy-button">Purchase</button>
     </main>
 
     <footer>

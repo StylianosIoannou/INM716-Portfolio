@@ -28,27 +28,27 @@
 
     <main class="portfolio">
         <div class="portfolio-grid">
-            <a href="artwork1.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='aral-sea') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/Aralsea.jpg') }}" alt="AI Artwork 1">
                 <p>The Aral Sea in Central Asia before Desertification.</p>
             </a>
-            <a href="artwork2.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='zayanderud') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/zayanderud.jpg') }}" alt="AI Artwork 2">
                 <p>The Zayanderud River in Isfahan before Drying.</p>
             </a>
-            <a href="artwork3.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='icelandic-forests') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/icelandicforests.jpg') }}" alt="AI Artwork 3">
                 <p>The Beech Forests in Iceland before Deforestation.</p>
             </a>
-            <a href="artwork4.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='native-americans') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/nativeamericans.jpg') }}" alt="AI Artwork 4">
                 <p>The Native American landscapes and culture.</p>
             </a>
-            <a href="artwork5.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='vikings-past') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/vikingspast.jpg') }}" alt="AI Artwork 5">
                 <p>The Norse Vikings lost to history within their Mountains and Seas.</p>
             </a>
-            <a href="artwork6.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='jerusalem') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/jerusalem.jpg') }}" alt="AI Artwork 6">
                 <p>Jerusalem on top of the Mountains by the Dead Sea.</p>
             </a>

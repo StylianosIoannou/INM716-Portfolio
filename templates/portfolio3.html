@@ -28,19 +28,19 @@
 
     <main class="portfolio">
         <div class="portfolio-grid">
-            <a href="artwork11.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='pahlavi_era') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/pahlavi era.jpg') }}" alt="AI Artwork 10">
                 <p>Modern Persia Rising.</p>
             </a>
-            <a href="artwork12.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='pairidaeza') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/pairidaeza.jpg') }}" alt="AI Artwork 11">
                 <p>Garden of Stars: The Last Paradise.</p>
             </a>
-            <a href="artwork13.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='shahnameh') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/shahnameh2.jpg') }}" alt="AI Artwork 12">
                 <p>Divs and Djinn of the Desert.</p>
             </a>
-            <a href="artwork14.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='achaeminid_empire') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/achaemenid empire.jpg') }}" alt="AI Artwork 13">
                 <p>Echoes of Achaemenid Majesty.</p>
             </a>

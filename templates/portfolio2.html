@@ -28,19 +28,19 @@
 
     <main class="portfolio">
         <div class="portfolio-grid">
-            <a href="artwork7.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='parthenon') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/Parthenon.jpg') }}" alt="AI Artwork 7">
                 <p>The Parthenon with all 17 Marbles</p>
             </a>
-            <a href="artwork8.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='olympia') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/Olympia.jpg') }}" alt="AI Artwork 8">
                 <p>The Statue Of Zeus in Olympia</p>
             </a>
-            <a href="artwork9.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='egyptian_hie') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/Egyptian_Hie.jpg') }}" alt="AI Artwork 9">
                 <p>Egyptian Hieroglyphs Modernized</p>
             </a>
-            <a href="artwork10.html" class="portfolio-item">
+            <a href="{{ url_for('artwork_page', art_id='linear_a') }}" class="portfolio-item">
                 <img src="{{ url_for('static', filename='images/Linear A.jpg') }}" alt="AI Artwork 9">
                 <p>Linear A Minoans Modernized</p>
             </a>

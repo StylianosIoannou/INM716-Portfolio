@@ -155,3 +155,19 @@ footer a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Flash messages styles */
+.flash-messages {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.flash.success {
+    color: #0a0;
+    font-weight: bold;
+}
+
+.flash.error {
+    color: #a00;
+    font-weight: bold;
+}
