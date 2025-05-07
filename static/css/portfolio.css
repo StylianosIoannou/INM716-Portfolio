@@ -1,4 +1,4 @@
-/* General Styles */
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,52 +10,106 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #f0e9dd;
+    color: #2f2f2f;
 }
 
-/* Header Styles */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
+    padding: 15px 40px;
+    background-color: #3d3b3c;
     color: white;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .social-media {
     display: flex;
+    gap: 15px;
 }
 
 .social-media a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
     font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-media a i {
+    font-size: 24px;
 }
 
 .social-media a:hover {
-    color: #00aced;
+    color: #8caea3;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: bold;
+.dropdown {
+    position: relative;
 }
 
+.dropbtn {
+    background-color: #6c9286;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
 
+.dropbtn:hover {
+    background-color: #8caea3;
+}
 
-/* Portfolio Grid */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #2f2f2f;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    background-color: #8caea3;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Portfolio Section */
 .portfolio {
     text-align: center;
     padding: 40px 20px;
+    font-family: 'Playfair Display', serif;
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 layout */
-    gap: 20px;
-    max-width: 800px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -66,8 +120,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 18px;
+    border-radius: 12px;
     transition: transform 0.3s ease;
 }
 
@@ -75,17 +129,51 @@ header {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .portfolio-item p {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 12px;
+    font-size: 17px;
+    color: #eaeaea;
+    line-height: 1.5;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
 }
 
 .portfolio-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 12px;
+}
+
+.page-link {
+    padding: 10px 16px;
+    background-color: #3d3b3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-family: 'Playfair Display', serif;
+}
+
+.page-link:hover {
+    background-color: #6c9286;
+}
+
+.page-link.current {
+    background-color: #8caea3;
+    cursor: default;
+}
+
 
 /* Footer */
 footer {
@@ -93,119 +181,20 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-color: #3d3b3c;
     padding: 15px;
     width: 100%;
 }
 
 footer a {
-    color: white;
+    color: #8caea3;
     text-decoration: none;
     margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #00aced;
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #444;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Responsive Styles */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.portfolio-item {
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
-
-.portfolio-item .placeholder {
-    width: 100%;
-    height: 250px;
-    background-color: #ccc;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.portfolio-item .description {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-.page-title {
-    text-align: center;
-    font-size: 28px;
-    margin-top: 40px;
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-    gap: 10px;
-}
-
-.page-link {
-    padding: 10px 16px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.page-link:hover {
-    background-color: #00aced;
-}
-
-.page-link.current {
-    background-color: #00aced;
-    font-weight: bold;
-    cursor: default;
+    color: #6c9286;
 }

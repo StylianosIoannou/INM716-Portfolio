@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,28 +10,36 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #f0e9dd;
+    color: #2f2f2f;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
+    padding: 15px 40px;
+    background-color: #3d3b3c;
     color: white;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .social-media {
     display: flex;
+    gap: 15px;
 }
 
 .social-media a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
     font-size: 20px;
-    display: inline-block;
+    transition: color 0.3s;
 }
 
 .social-media a i {
@@ -38,96 +47,115 @@ header {
 }
 
 .social-media a:hover {
-    color: #00aced;
-}
-
-.title {
-    font-size: 24px;
-    font-weight: bold;
+    color: #8caea3;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropbtn {
-    background-color: #444;
+    background-color: #6c9286;
     color: white;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #8caea3;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
-    background-color: white;
+    background-color: #f9f9f9;
     min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 10px;
+    color: #2f2f2f;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #8caea3;
+    color: white;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Footer */
 footer {
     margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-color: #3d3b3c;
     padding: 15px;
-    position: relative;
 }
 
 footer a {
-    color: white;
+    color: #8caea3;
     text-decoration: none;
     margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #00aced;
+    color: #6c9286;
 }
 
+/* Main Content */
 main {
     padding: 20px;
 }
 
 main h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 40px 0 20px;
+    font-size: 32px;
 }
 
+/* Art Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    padding: 40px;
-    max-width: 1000px;
-    margin: auto;
+    padding: 0 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
 }
 
 .art-piece {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 250px;
+    border: 1px solid #ddd;
+    padding: 20px;
     text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    font-family: 'Playfair Display', serif;
+}
+
+.art-piece:hover {
+    transform: scale(1.02);
 }
 
 .art-piece img {
@@ -137,24 +165,47 @@ main h1 {
 }
 
 .art-piece h3 {
-    margin: 10px 0;
+    margin: 15px 0 5px;
+    font-size: 19px;
+    font-weight: normal; /* Not bold */
+    color: #2f2f2f;
+    font-family: 'Playfair Display', serif;
 }
 
 .price {
-    font-weight: bold;
-    margin: 10px 0;
+    font-weight: normal;
+    color: #6c9286;
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
 }
 
 .buy-btn {
-    background-color: #007bff;
+    background-color: #8caea3;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .buy-btn:hover {
-    background-color: #0056b3;
+    background-color: #6c9286;
+    transform: scale(1.05);
+}
+
+
+/* Payment Logos */
+form img {
+    margin: 5px 0;
+    max-width: 120px;
+}
+
+form section {
+    font-size: 13px;
+    color: #555;
+    margin-top: 5px;
 }
