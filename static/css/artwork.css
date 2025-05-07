@@ -128,15 +128,18 @@
   /* Image Comparison Layout */
   .image-comparison {
     display: flex;
-    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
+    align-items: stretch;
+    flex-wrap: wrap;
   }
   
   .image-comparison div {
-    flex: 1 1 300px;
-    max-width: 420px;
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   
@@ -150,9 +153,10 @@
   
   .image-comparison img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   
   /* Description Text */
