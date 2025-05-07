@@ -157,6 +157,7 @@
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
   }
   
   /* Description Text */
@@ -193,3 +194,16 @@
     color: #6c9286;
   }
   
+  /*single image*/
+  .single-image {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.single-image img {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

@@ -41,7 +41,9 @@
             </div>
         </div>
         {% else %}
-        <img src="{{ url_for('static', filename=art.image) }}" alt="{{ art.title }}" class="artwork-image">
+        <div class="single-image">
+            <img src="{{ url_for('static', filename=art.image) }}" alt="{{ art.title }}">
+        </div>
         {% endif %}
 
         <p class="artwork-description">{{ art.description }}</p>
