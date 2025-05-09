@@ -29,7 +29,7 @@ def contact():
         return redirect("/contact")
 
     return render_template("Contact.html")
-
+# Send email function
 def send_email(name, email, message):
     subject = f"New Contact Form Message from {name}"
     body = f"From: {name} <{email}>\n\n{message}"
@@ -39,7 +39,7 @@ def send_email(name, email, message):
         server.starttls()
         server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         server.sendmail(EMAIL_ADDRESS, EMAIL_ADDRESS, msg)
-
+# artworks dictionary
 artworks = {
     "aral-sea": {
         "title": "The Aral Sea",
@@ -149,7 +149,7 @@ def portfolio2():
 @app.route('/portfolio3')
 def portfolio3():
     return render_template('portfolio3.html')
-#artowrk pages
+#artwork pages
 @app.route('/artwork/<art_id>')
 def artwork_page(art_id):
     art = artworks.get(art_id)
